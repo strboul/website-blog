@@ -1,30 +1,22 @@
+import SiteLink from "@/components/SiteLink";
+
 import { FaGithub } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 
-const NewTabLink = ({ children, href }) => {
-  return (
-    <div>
-      <a target="_blank" rel="noopener noreferrer" href={href}>
-        {children}
-      </a>
-    </div>
-  );
-};
-
 const SocialLinks = () => {
   return (
-    <table>
-      <td>
-        <NewTabLink href="https://github.com/strboul">
+    <div className="flex flex-row space-x-3">
+      <SiteLink href="https://github.com/strboul">
+        <a target="_blank" rel="noopener noreferrer">
           <FaGithub />
-        </NewTabLink>
-      </td>
-      <td>
-        <NewTabLink href="https://twitter.com/strboul">
+        </a>
+      </SiteLink>
+      <SiteLink href="https://twitter.com/strboul">
+        <a target="_blank" rel="noopener noreferrer">
           <FaTwitter />
-        </NewTabLink>
-      </td>
-    </table>
+        </a>
+      </SiteLink>
+    </div>
   );
 };
 
