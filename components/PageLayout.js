@@ -24,7 +24,7 @@ const Header = () => {
 
 const Footer = () => {
   return (
-    <footer className="flex justify-between p-4">
+    <footer className="flex justify-between p-4 py-10">
       <SocialLinks />
       <p style={{ fontSize: "x-small" }}>
         &#169; 2017 &mdash; {new Date().getFullYear()} | All rights reserved
@@ -47,18 +47,19 @@ const PageHead = ({ name }) => {
 };
 
 const PageBody = ({ children }) => {
-  return <main className="p-8">{children}</main>;
+  return <main className="p-8 flex-grow">{children}</main>;
 };
 
 const PageLayout = ({ children, name }) => {
-  const navbarPaths = ["/about", "/notes"];
   return (
     <div className="dark:bg-black dark:text-gray-100">
-      <PageHead name={name} />
-      <Header />
-      <Navbar paths={navbarPaths} />
-      <PageBody children={children} />
-      <Footer />
+      <div className="px-10 min-h-screen flex flex-col">
+        <PageHead name={name} />
+        <Header />
+        <Navbar paths={["/about", "/notes"]} />
+        <PageBody children={children} />
+        <Footer />
+      </div>
     </div>
   );
 };

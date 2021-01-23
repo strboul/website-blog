@@ -20,17 +20,17 @@ a {
   text-decoration: none;
 }
 
-/*
- * See more: https://developer.mozilla.org/en-US/docs/Web/CSS/::selection
- */
-
+/* See more: https://developer.mozilla.org/en-US/docs/Web/CSS/::selection */
 ::selection {
   background-color: #0070f3;
   color: white;
 }
 
-/* For Firefox */
-::-moz-selection {
-  background-color: #0070f3;
-  color: white;
+/* custom "MDX class" styles */
+.mdx a {
+  @apply underline;
+}
+
+.mdx a:hover {
+  @apply bg-yellow-100;
 }

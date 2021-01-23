@@ -7,12 +7,12 @@ const SocialLinks = () => {
   return (
     <div className="flex flex-row space-x-3">
       <SiteLink href="https://github.com/strboul">
-        <a target="_blank" rel="noopener noreferrer">
+        <a>
           <FaGithub />
         </a>
       </SiteLink>
       <SiteLink href="https://twitter.com/strboul">
-        <a target="_blank" rel="noopener noreferrer">
+        <a>
           <FaTwitter />
         </a>
       </SiteLink>

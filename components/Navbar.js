@@ -8,14 +8,16 @@ import SiteLink from "@/components/SiteLink";
  */
 const Navbar = ({ paths }) => {
   return (
-    <nav className="flex flex-row space-x-2 float-right px-8">
-      {paths.map((path) => {
-        return (
-          <SiteLink href={path}>
-            <a key={path}>{path}</a>
-          </SiteLink>
-        );
-      })}
+    <nav className="flex justify-end">
+      <div className="flex flex-row space-x-2 px-8">
+        {paths.map((path) => {
+          return (
+            <SiteLink key={path} href={path}>
+              <a>{path}</a>
+            </SiteLink>
+          );
+        })}
+      </div>
     </nav>
   );
 };
