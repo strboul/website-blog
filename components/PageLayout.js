@@ -7,15 +7,17 @@ import Navbar from "@/components/Navbar";
 
 const Header = () => {
   return (
-    <div className="flex justify-between py-4 px-6">
+    <div className="flex justify-between px-8 py-4">
       <div>
         <SiteLink href="/">
           <a>
-            <h1 className="text-2xl font-medium">Scientia Potentia</h1>
+            <h1 className="text-4xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-blue-500">
+              Scientia Potentia
+            </h1>
           </a>
         </SiteLink>
       </div>
-      <div>
+      <div className="py-2">
         <ThemeChanger />
       </div>
     </div>
@@ -24,7 +26,7 @@ const Header = () => {
 
 const Footer = () => {
   return (
-    <footer className="flex justify-between p-4 py-10">
+    <footer className="flex justify-between px-8 py-10">
       <SocialLinks />
       <p style={{ fontSize: "x-small" }}>
         &#169; 2017 &mdash; {new Date().getFullYear()} | All rights reserved
@@ -33,8 +35,8 @@ const Footer = () => {
   );
 };
 
-const PageHead = ({ name }) => {
-  const nameTitle = typeof name !== "undefined" ? `${name} | ` : "";
+const PageHead = ({ title }) => {
+  const nameTitle = typeof title !== "undefined" ? `${title} | ` : "";
   return (
     <Head>
       <title>{nameTitle}Scientia Potentia</title>
@@ -50,15 +52,17 @@ const PageBody = ({ children }) => {
   return <main className="p-8 flex-grow">{children}</main>;
 };
 
-const PageLayout = ({ children, name }) => {
+const PageLayout = ({ children, title }) => {
   return (
     <div className="dark:bg-black dark:text-gray-100">
-      <div className="px-10 min-h-screen flex flex-col">
-        <PageHead name={name} />
-        <Header />
-        <Navbar paths={["/about", "/notes"]} />
-        <PageBody children={children} />
-        <Footer />
+      <div className="min-h-screen flex flex-col">
+        <div className="max-w-3xl mx-auto mb-16 w-full">
+          <PageHead title={title} />
+          <Header />
+          <Navbar paths={["/about", "/notes"]} />
+          <PageBody children={children} />
+          <Footer />
+        </div>
       </div>
     </div>
   );

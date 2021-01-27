@@ -22,15 +22,44 @@ a {
 
 /* See more: https://developer.mozilla.org/en-US/docs/Web/CSS/::selection */
 ::selection {
-  background-color: #0070f3;
-  color: white;
+  @apply bg-indigo-300;
+  @apply text-white;
 }
 
-/* custom "MDX class" styles */
-.mdx a {
+/* modify prose class which is from TailwindCSS Typography */
+.prose {
+  @apply text-black dark:text-white;
+}
+
+.prose a {
+  /* @apply text-black dark:text-white; */
   @apply underline;
+  @apply font-normal;
 }
 
-.mdx a:hover {
-  @apply bg-yellow-100;
+.prose a:hover {
+  @apply text-white dark:text-black;
+  @apply bg-blue-400;
+}
+
+.prose h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-black dark:text-white;
+}
+
+/* TODO add more */
+.prose h2 {
+  @apply text-lg;
+}
+
+.prose code {
+  @apply text-gray-800 dark:text-gray-200 px-1 py-0.5 border border-gray-100 dark:border-gray-800 rounded-md bg-gray-100 dark:bg-gray-900;
+}
+
+.prose pre {
+  @apply text-gray-800 bg-gray-50 border border-gray-200 dark:border-gray-700 dark:bg-gray-900;
 }

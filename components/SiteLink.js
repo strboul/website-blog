@@ -6,7 +6,7 @@ import Link from "next/link";
  */
 const SiteLink = ({ children, href }) => {
   return (
-    <div className="no-underline fill-current hover:text-blue-600">
+    <div className="no-underline fill-current hover:text-blue-400">
       <Link href={href}>{children}</Link>
     </div>
   );

@@ -1,8 +1,16 @@
-import PageLayout from "@/components/PageLayout";
+import PostLayout from "@/components/PostLayout";
 import { getAllPostLinks, getPostContent } from "@/lib/posts";
 
-function Post({ postContent }) {
-  return <PageLayout>{postContent}</PageLayout>;
+import hydrate from "next-mdx-remote/hydrate";
+import renderToString from "next-mdx-remote/render-to-string";
+import matter from "gray-matter";
+
+function Post({ source, frontMatter }) {
+  const content = hydrate(source);
+  const { title, publishedAt } = frontMatter;
+  return (
+    <PostLayout title={title} publishedAt={publishedAt} content={content} />
+  );
 }
 
 export async function getStaticPaths() {
@@ -14,10 +22,15 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const postContent = await getPostContent(params.slug);
+  const source = await getPostContent(params.slug);
+
+  const { content, data } = matter(source);
+  const mdxSource = await renderToString(content, { scope: data });
+
   return {
     props: {
-      postContent,
+      source: mdxSource,
+      frontMatter: data,
     },
   };
 }
