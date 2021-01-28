@@ -9,9 +9,7 @@ const PostLayout = ({ title, publishedAt, content }) => {
           <div className="text-sm text-gray-500">{publishedAt}</div>
           <TitleSection>{title}</TitleSection>
         </div>
-        <div className="prose">
-        {content}
-        </div>
+        <div className="prose">{content}</div>
       </article>
     </PageLayout>
   );

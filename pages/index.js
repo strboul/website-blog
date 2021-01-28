@@ -10,7 +10,7 @@ const BlogPosts = ({ posts }) => {
           <div key={post} className="flex flex-row space-x-2">
             <div className="text-gray-600">{post.publishedAt}</div>
             <div>
-              <SiteLink href={post.slug}>{post.title}</SiteLink>
+              <SiteLink href={post.link}>{post.title}</SiteLink>
             </div>
           </div>
         );

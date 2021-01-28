@@ -1,5 +1,5 @@
 import PostLayout from "@/components/PostLayout";
-import { getAllPostLinks, getPostContent } from "@/lib/posts";
+import { getPostContent, getSortedPostsData } from "@/lib/posts";
 
 import hydrate from "next-mdx-remote/hydrate";
 import renderToString from "next-mdx-remote/render-to-string";
@@ -14,7 +14,14 @@ function Post({ source, frontMatter }) {
 }
 
 export async function getStaticPaths() {
-  const paths = await getAllPostLinks();
+  const posts = await getSortedPostsData();
+  const paths = posts.map((post) => {
+    return {
+      params: {
+        slug: post.slug,
+      },
+    };
+  });
   return {
     paths,
     fallback: false,
