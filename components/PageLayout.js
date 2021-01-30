@@ -11,7 +11,7 @@ const Header = () => {
       <div>
         <SiteLink href="/">
           <a>
-            <h1 className="text-4xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-blue-500">
+            <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-blue-500">
               Scientia Potentia
             </h1>
           </a>
