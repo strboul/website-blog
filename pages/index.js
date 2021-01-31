@@ -7,7 +7,7 @@ const BlogPosts = ({ posts }) => {
     <>
       {posts.map((post) => {
         return (
-          <div key={post} className="flex flex-row space-x-2">
+          <div key={post.slug} className="flex flex-row space-x-2">
             <div className="text-gray-600">{post.publishedAt}</div>
             <div>
               <SiteLink href={post.link}>{post.title}</SiteLink>
