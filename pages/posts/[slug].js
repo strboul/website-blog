@@ -39,6 +39,7 @@ export async function getStaticProps({ params }) {
       source: mdxSource,
       frontMatter: data,
     },
+    revalidate: process.env.ISR_REVALIDATE,
   };
 }
 

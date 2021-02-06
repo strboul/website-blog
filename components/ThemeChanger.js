@@ -14,7 +14,7 @@ const ThemeChanger = () => {
   if (!mounted) return null;
 
   const themeCond = theme === "dark" ? "light" : "dark";
-  const tooltip = `Switch to ${themeCond} theme`
+  const tooltip = `Switch to ${themeCond} theme`;
   return (
     <>
       {mounted && (

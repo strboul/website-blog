@@ -33,7 +33,7 @@ export const getStaticProps = async () => {
     props: {
       posts,
     },
-    revalidate: 600, // render every 10 minutes
+    revalidate: process.env.ISR_REVALIDATE,
   };
 };
 
