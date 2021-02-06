@@ -3,12 +3,12 @@ import TitleSection from "@/components/TitleSection";
 
 import { timeSince } from "@/lib/timeSince";
 
-const PostLayout = ({ title, publishedAt, content }) => {
+const PostLayout = ({ title, publishedAt, readingTime, content }) => {
   return (
     <PageLayout title={title}>
       <article>
-        <div className="pb-12">
-          <div className="flex items-center space-x-2 pb-2">
+        <div className="pb-8">
+          <div className="flex items-center space-x-2">
             <div className="text-md text-gray-700 dark:text-gray-200">
               {publishedAt}
             </div>
@@ -17,6 +17,9 @@ const PostLayout = ({ title, publishedAt, content }) => {
             </div>
           </div>
           <TitleSection>{title}</TitleSection>
+          <div className="flex justify-end text-sm text-gray-600 dark:text-gray-300">
+            {readingTime}
+          </div>
         </div>
         <div className="prose">{content}</div>
       </article>

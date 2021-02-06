@@ -29,6 +29,7 @@ a {
 /* modify prose class which is from TailwindCSS Typography */
 .prose {
   @apply text-black dark:text-white;
+  @apply max-w-none;
 }
 
 .prose a {

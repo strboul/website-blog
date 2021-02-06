@@ -3,13 +3,19 @@ import { getPostContent, getSortedPostsData } from "@/lib/posts";
 
 import hydrate from "next-mdx-remote/hydrate";
 import renderToString from "next-mdx-remote/render-to-string";
+import readingTime from "reading-time";
 import matter from "gray-matter";
 
-function Post({ source, frontMatter }) {
+function Post({ source, frontMatter, readingTime }) {
   const content = hydrate(source);
   const { title, publishedAt } = frontMatter;
   return (
-    <PostLayout title={title} publishedAt={publishedAt} content={content} />
+    <PostLayout
+      title={title}
+      publishedAt={publishedAt}
+      readingTime={readingTime}
+      content={content}
+    />
   );
 }
 
@@ -38,6 +44,7 @@ export async function getStaticProps({ params }) {
     props: {
       source: mdxSource,
       frontMatter: data,
+      readingTime: readingTime(content).text,
     },
     revalidate: process.env.ISR_REVALIDATE,
   };
