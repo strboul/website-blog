@@ -1,5 +1,5 @@
-import PostLayout from "@/components/PostLayout";
-import { getPostContent, getSortedPostsData } from "@/lib/posts";
+import PostLayout from "@/src/components/PostLayout";
+import { getPostContent, getSortedPostsData } from "@/src/lib/posts";
 
 import hydrate from "next-mdx-remote/hydrate";
 import renderToString from "next-mdx-remote/render-to-string";

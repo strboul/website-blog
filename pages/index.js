@@ -1,6 +1,6 @@
-import PageLayout from "@/components/PageLayout";
-import SiteLink from "@/components/SiteLink";
-import { getSortedPostsData } from "@/lib/posts";
+import PageLayout from "@/src/components/PageLayout";
+import SiteLink from "@/src/components/SiteLink";
+import { getSortedPostsData } from "@/src/lib/posts";
 
 const BlogPosts = ({ posts }) => {
   return (

@@ -1,4 +1,4 @@
-import SiteLink from "@/components/SiteLink";
+import SiteLink from "@/src/components/SiteLink";
 
 import { FaGithub } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";

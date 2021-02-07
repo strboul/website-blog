@@ -1,4 +1,4 @@
-import SiteLink from "@/components/SiteLink";
+import SiteLink from "@/src/components/SiteLink";
 
 /**
  * Navbar of the page

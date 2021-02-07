@@ -1,9 +1,9 @@
 import Head from "next/head";
-import SiteLink from "@/components/SiteLink";
+import SiteLink from "@/src/components/SiteLink";
 
-import SocialLinks from "@/components/SocialLinks";
-import ThemeChanger from "@/components/ThemeChanger";
-import Navbar from "@/components/Navbar";
+import SocialLinks from "@/src/components/SocialLinks";
+import ThemeChanger from "@/src/components/ThemeChanger";
+import Navbar from "@/src/components/Navbar";
 
 const Header = () => {
   return (

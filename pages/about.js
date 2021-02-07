@@ -1,5 +1,5 @@
-import PageLayout from "@/components/PageLayout";
-import TitleSection from "@/components/TitleSection";
+import PageLayout from "@/src/components/PageLayout";
+import TitleSection from "@/src/components/TitleSection";
 
 import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";
