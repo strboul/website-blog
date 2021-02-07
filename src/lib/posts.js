@@ -25,12 +25,24 @@ const getSortedPostsData = async () => {
     slugs.map(async (slug) => {
       const content = await getPostContent(slug);
       const { data: metadata } = matter(content);
-      if (metadata.draft) {
-        return null;
+
+      /* Exclude draft posts from the list.  If the Next is in the development
+       * mode, show them with a draft mark.*/
+      if (typeof metadata.draft === "undefined" || metadata.draft) {
+        if (process.env.NODE_ENV === "development") {
+          const draft_text = "[DRAFT]";
+          metadata.title = metadata.title.startsWith(draft_text)
+            ? metadata.title
+            : `${draft_text} ${metadata.title}`;
+        } else {
+          return null;
+        }
       }
+
       return { slug, link: `/posts/${slug}`, ...metadata };
     })
   );
+  // filter all null values
   const allPostsDataFiltered = allPostsData.filter(Boolean);
 
   // order posts by date
