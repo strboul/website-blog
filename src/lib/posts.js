@@ -1,5 +1,5 @@
 import matter from "gray-matter";
-import { fetchGithub } from "@/src/lib/github";
+import fetchGithub from "@/src/lib/github";
 
 // TODO move it to next.config.js ?
 const blogPostsRepo = "repos/strboul/website-blog-posts";

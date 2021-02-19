@@ -1,7 +1,7 @@
 import PageLayout from "@/src/components/PageLayout";
 import TitleSection from "@/src/components/TitleSection";
 
-import { timeSince } from "@/src/lib/timeSince";
+import timeSince from "@/src/lib/timeSince";
 
 const PostLayout = ({ title, publishedAt, readingTime, content }) => {
   return (

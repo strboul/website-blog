@@ -21,4 +21,4 @@ const timeSince = (date) => {
   return makeTimeText(interval, "second");
 };
 
-export { timeSince };
+export default timeSince;

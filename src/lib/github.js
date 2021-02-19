@@ -13,4 +13,4 @@ const fetchGithub = async (endpoint) => {
   return data;
 };
 
-export { fetchGithub };
+export default fetchGithub;

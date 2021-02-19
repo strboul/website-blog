@@ -2,12 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
+@font-face {
+  font-family: "IBMPlex-Sans";
+  src: url("/fonts/IBMPlexSans-Text.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBMPlex-Mono";
+  src: url("/fonts/IBMPlexMono-Text.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBMPlex-Serif";
+  src: url("/fonts/IBMPlexSerif-Text.woff2") format("woff2");
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "IBMPlex-Sans", sans-serif;
 }
 
 * {
@@ -28,8 +39,14 @@ a {
 
 /* modify prose class which is from TailwindCSS Typography */
 .prose {
+  font-family: "IBMPlex-Serif", serif;
   @apply text-black dark:text-white;
   @apply max-w-none;
+  @apply text-justify;
+}
+
+.prose strong {
+  @apply text-black dark:text-white;
 }
 
 .prose a {
@@ -49,6 +66,7 @@ a {
 .prose h4,
 .prose h5,
 .prose h6 {
+  font-family: "IBMPlex-Sans", sans-serif;
   @apply text-black dark:text-white;
   @apply my-4;
 }
@@ -58,18 +76,24 @@ a {
 }
 
 .prose code {
+  font-family: "IBMPlex-Mono", monospace;
   @apply text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-900;
   @apply px-1 py-0.5;
   @apply border border-gray-100 dark:border-gray-800 rounded-md;
 }
 
-/* remove backticks around code */
+/* remove backticks around code tags */
 .prose code::after,
 .prose code::before {
   content: "";
 }
 
 .prose pre {
+  font-family: "IBMPlex-Mono", monospace;
   @apply text-gray-800 bg-gray-50 dark:bg-gray-900;
   @apply border border-gray-200 dark:border-gray-700;
+}
+
+.prose blockquote {
+  @apply text-gray-500 dark:text-gray-400;
 }

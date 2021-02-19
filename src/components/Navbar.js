@@ -13,7 +13,7 @@ const Navbar = ({ paths }) => {
         {paths.map((path) => {
           return (
             <SiteLink key={path} href={path}>
-              <a>{path}</a>
+              {path}
             </SiteLink>
           );
         })}
