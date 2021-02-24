@@ -4,6 +4,3 @@ node_modules
 
 .next
 .vercel
-
-public/sitemap.xml
-public/feed.xml

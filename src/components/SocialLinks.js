@@ -11,7 +11,7 @@ const SocialLinks = () => {
       <SiteLink href="https://twitter.com/strboul">
         <FaTwitter />
       </SiteLink>
-      <SiteLink href="/rss">
+      <SiteLink href="/feed.xml" dontUseNextLink>
         <FaRss />
       </SiteLink>
     </div>
