@@ -10,7 +10,8 @@
     "debug": "NODE_OPTIONS='--inspect' next dev",
     "prettier": "prettier --write '**/*.{ts,js,css,html}'",
     "checkLinks": "broken-link-checker https://blog.metinyazici.org -ro --user-agent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36'",
-    "killDev": "kill $(lsof -i :3000 | awk '$1 == \"node\" { print $2 }')"
+    "killDev": "kill $(lsof -i :3000 | awk '$1 == \"node\" { print $2 }')",
+    "listVercelDeployments": "vercel ls website-blog"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.0",
@@ -30,7 +31,8 @@
   "devDependencies": {
     "broken-link-checker": "^0.7.8",
     "current-git-branch": "^1.1.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "vercel": "^21.3.3"
   },
   "prettier": {
     "tabWidth": 2,
