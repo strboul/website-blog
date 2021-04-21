@@ -11,7 +11,8 @@
     "prettier": "prettier --write '**/*.{ts,js,css,html}'",
     "checkLinks": "broken-link-checker https://blog.metinyazici.org -ro --user-agent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36'",
     "killDev": "kill $(lsof -i :3000 | awk '$1 == \"node\" { print $2 }')",
-    "listVercelDeployments": "vercel ls website-blog"
+    "listVercelDeployments": "vercel ls website-blog",
+    "removeVercelDeployment": "vercel rm $previewUrl"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.0",
