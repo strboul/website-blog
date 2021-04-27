@@ -59,7 +59,7 @@ const PageLayout = ({ children, title }) => {
         <div className="max-w-3xl mx-auto mb-16 w-full">
           <PageHead title={title} />
           <Header />
-          <Navbar paths={["/about", "/notes"]} />
+          <Navbar paths={["/about", "/projects"]} />
           <PageBody children={children} />
           <Footer />
         </div>

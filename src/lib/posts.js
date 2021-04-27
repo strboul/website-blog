@@ -1,22 +1,17 @@
 import matter from "gray-matter";
-import fetchGithub from "@/src/lib/github";
-
-// TODO move it to next.config.js ?
-const blogPostsRepo = "repos/strboul/website-blog-posts";
+import { fetchGithub, readFileFromGithub } from "@/src/lib/github";
 
 const getAllPostSlugs = async () => {
-  const endpoint = `${blogPostsRepo}/contents/posts`;
+  const endpoint = `${process.env.CONTENT_REPO}/contents/posts`;
   const postsList = await fetchGithub(endpoint);
   const slug = postsList.map((post) => post.name);
   return slug;
 };
 
 const getPostContent = async (slug) => {
-  const indexFile = await fetchGithub(
-    `${blogPostsRepo}/contents/posts/${slug}/index.md`
-  );
-  const content = Buffer.from(indexFile.content, "base64").toString("utf-8");
-  return content;
+  const indexFilePath = `${process.env.CONTENT_REPO}/contents/posts/${slug}/index.md`;
+  const readFile = await readFileFromGithub(indexFilePath);
+  return readFile;
 };
 
 const getSortedPostsData = async () => {

@@ -13,4 +13,10 @@ const fetchGithub = async (endpoint) => {
   return data;
 };
 
-export default fetchGithub;
+const readFileFromGithub = async (path) => {
+  const file = await fetchGithub(path);
+  const content = Buffer.from(file.content, "base64").toString("utf-8");
+  return content;
+};
+
+export { fetchGithub, readFileFromGithub };

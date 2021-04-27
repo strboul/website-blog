@@ -2,6 +2,9 @@ const currentGitBranchName = require("current-git-branch");
 
 module.exports = {
   env: {
+    // in Github
+    CONTENT_REPO: "repos/strboul/website-blog-posts",
+
     // Incremental Static Regeneration (ISR)
     ISR_REVALIDATE: 3600, // render every 1 hour
 

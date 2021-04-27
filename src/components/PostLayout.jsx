@@ -1,5 +1,6 @@
 import PageLayout from "@/src/components/PageLayout";
 import TitleSection from "@/src/components/TitleSection";
+import Prose from "@/src/components/Prose";
 
 import timeSince from "@/src/lib/timeSince";
 
@@ -19,7 +20,7 @@ const PostLayout = ({ title, publishedAt, readingTime, content }) => {
             <div>{readingTime}</div>
           </div>
         </div>
-        <div className="prose">{content}</div>
+        <Prose>{content}</Prose>
       </article>
     </PageLayout>
   );

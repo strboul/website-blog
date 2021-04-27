@@ -1,5 +1,6 @@
 import PageLayout from "@/src/components/PageLayout";
 import TitleSection from "@/src/components/TitleSection";
+import Prose from "@/src/components/Prose";
 
 import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";
@@ -9,10 +10,8 @@ const About = ({ source }) => {
 
   return (
     <PageLayout title="About">
-      <div className="pb-6">
-        <TitleSection>About</TitleSection>
-      </div>
-      <div className="prose">{content}</div>
+      <TitleSection>About</TitleSection>
+      <Prose>{content}</Prose>
     </PageLayout>
   );
 };
