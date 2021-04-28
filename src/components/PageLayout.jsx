@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <div className="flex justify-between px-8 py-4">
       <div>
-        <SiteLink href="/">
+        <SiteLink href="/" tooltip="Homepage">
           <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-blue-500">
             Scientia Potentia
           </h1>
