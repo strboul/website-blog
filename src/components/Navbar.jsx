@@ -8,7 +8,7 @@ import SiteLink from "@/src/components/SiteLink";
  */
 const Navbar = ({ paths }) => {
   return (
-    <nav className="flex justify-end">
+    <nav className="text-sm md:text-base flex justify-end">
       <div className="flex flex-row space-x-2 px-8">
         {paths.map((path) => {
           return (

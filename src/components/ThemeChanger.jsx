@@ -22,7 +22,7 @@ const ThemeChanger = () => {
           aria-label={tooltip}
           title={tooltip}
           type="button"
-          className="text-gray-100 dark:text-black bg-gray-800 dark:bg-gray-200 hover:bg-black dark:hover:bg-white rounded p-1 focus:outline-none"
+          className="text-sm md:text-base text-gray-100 dark:text-black bg-gray-800 dark:bg-gray-200 hover:bg-black dark:hover:bg-white rounded p-1 focus:outline-none"
           onClick={() => setTheme(themeCond)}
         >
           {theme === "dark" ? <BiSun /> : <BsMoon />}

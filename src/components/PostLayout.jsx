@@ -8,9 +8,9 @@ const PostLayout = ({ title, publishedAt, readingTime, content }) => {
   return (
     <PageLayout title={title}>
       <article>
-        <div className="pb-14">
+        <div className="pb-6 md:pb-14">
           <TitleSection>{title}</TitleSection>
-          <div className="flex space-x-2 text-sm text-gray-400 dark:text-gray-500">
+          <div className="flex space-x-1 md:space-x-2 text-xs md:text-sm text-gray-400 dark:text-gray-500">
             <div>Metin Yazici</div>
             <div>•</div>
             <div>

@@ -8,10 +8,10 @@ import DevMode from "@/src/components/DevMode";
 
 const Header = () => {
   return (
-    <div className="flex justify-between px-8 py-4">
+    <div className="flex justify-between px-4 md:px-8 py-4">
       <div>
         <SiteLink href="/" tooltip="Homepage">
-          <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-blue-500">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-blue-500 filter drop-shadow-lg">
             Scientia Potentia
           </h1>
         </SiteLink>
@@ -25,7 +25,7 @@ const Header = () => {
 
 const Footer = () => {
   return (
-    <footer className="flex justify-between px-8 py-10">
+    <footer className="flex justify-between px-8 pt-12">
       <SocialLinks />
       <div className="text-xs">
         &#169; 2017 &mdash; {new Date().getFullYear()} | All rights reserved
@@ -48,7 +48,7 @@ const PageHead = ({ title }) => {
 };
 
 const PageBody = ({ children }) => {
-  return <main className="p-8 flex-grow">{children}</main>;
+  return <main className="px-4 md:px-8 py-8 flex-grow">{children}</main>;
 };
 
 const PageLayout = ({ children, title }) => {

@@ -50,14 +50,15 @@ a {
 }
 
 .prose a {
-  @apply text-black dark:text-white;
+  @apply text-blue-300 dark:text-blue-400;
   @apply underline;
   @apply font-normal;
 }
 
 .prose a:hover {
   @apply text-white dark:text-black;
-  @apply bg-blue-400;
+  @apply bg-blue-500;
+  @apply no-underline;
 }
 
 .prose h1,

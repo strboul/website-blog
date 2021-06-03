@@ -18,6 +18,8 @@ const About = ({ source }) => {
 
 export const getStaticProps = async () => {
   const source = `
+  Welcome here! 👋
+
   I initially started blogging in June 2017 and been mainly writing about many
   different topics including, but not limited to, programming languages,
   statistics, data visualizations, databases and relational tables, web
