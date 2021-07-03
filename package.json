@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "debug": "NODE_OPTIONS='--inspect' next dev",
-    "dependenciesUpdate": "npm list -g npm-check-updates && ncu -u",
+    "checkDependencyUpdates": "ncu -u --errorLevel 2",
     "prettier": "prettier --write '**/*.{ts,js,css,html}'",
     "checkLinks": "broken-link-checker https://blog.metinyazici.org -ro --user-agent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36'",
     "killDev": "kill $(lsof -i :3000 | awk '$1 == \"node\" { print $2 }')",
@@ -16,23 +16,24 @@
     "removeVercelDeployment": "vercel rm $previewUrl"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.4.0",
-    "autoprefixer": "^10.2.5",
-    "globby": "^11.0.3",
+    "@tailwindcss/typography": "^0.4.1",
+    "autoprefixer": "^10.2.6",
+    "globby": "^11.0.4",
     "gray-matter": "^4.0.3",
-    "next": "10.2.0",
-    "next-mdx-remote": "^2.1.4",
-    "next-themes": "0.0.14",
-    "postcss": "^8.2.13",
+    "next": "11.0.1",
+    "next-mdx-remote": "^3.0.2",
+    "next-themes": "0.0.15",
+    "postcss": "^8.3.5",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
     "reading-time": "^1.3.0",
-    "tailwindcss": "^2.1.2"
+    "tailwindcss": "^2.2.4"
   },
   "devDependencies": {
     "broken-link-checker": "*",
     "current-git-branch": "*",
+    "npm-check-updates": "^11.8.1",
     "prettier": "*",
     "vercel": "*"
   },
